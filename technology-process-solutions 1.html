@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technology & Process Solutions | Green Chemical & Bioprocess Engineering</title>
+  <meta name="description" content="Advanced technology and process solutions — fermentation & distillation systems, anaerobic digestion, biogas upgradation, green chemical process development, CO2 recovery, and energy optimization."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --forest:   #1a3a2a;
+      --deep:     #0f2219;
+      --mid:      #2d6645;
+      --leaf:     #3d8b5a;
+      --sage:     #6aaa7d;
+      --mint:     #a8d5b5;
+      --pale:     #e8f5ed;
+      --white:    #ffffff;
+      --offwhite: #f7fbf8;
+      --muted:    #4a6157;
+      --ltxt:     #6b8378;
+      --border:   rgba(61,139,90,0.18);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--forest);overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(15,34,25,0.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(106,170,125,0.15);display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:70px;}
+    .logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--white);}
+    .logo span{color:var(--sage);}
+    .nav-links{display:flex;gap:2.2rem;list-style:none;}
+    .nav-links a{color:var(--mint);font-size:0.875rem;font-weight:400;text-decoration:none;letter-spacing:0.03em;transition:color 0.25s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-cta{background:var(--leaf);color:var(--white);padding:0.55rem 1.5rem;border-radius:30px;font-size:0.85rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:background 0.25s,transform 0.2s;}
+    .nav-cta:hover{background:var(--sage);transform:translateY(-1px);}
+
+    /* HERO */
+    .hero{min-height:100vh;background:var(--deep);position:relative;overflow:hidden;display:flex;align-items:center;padding:9rem 6% 6rem;}
+    .hero-rings{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55vw;height:55vw;max-width:800px;max-height:800px;opacity:0.06;}
+    .hero-rings circle{fill:none;stroke:var(--sage);}
+    .hero-mesh{position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 80% 50%,rgba(45,102,69,0.35) 0%,transparent 65%),radial-gradient(ellipse 30% 40% at 10% 80%,rgba(26,58,42,0.6) 0%,transparent 60%);}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(106,170,125,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(106,170,125,0.04) 1px,transparent 1px);background-size:72px 72px;}
+    .hero-content{position:relative;max-width:720px;}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);margin-bottom:1.6rem;}
+    .eyebrow::before{content:'';display:block;width:28px;height:1.5px;background:var(--sage);}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6.5vw,5.5rem);font-weight:600;line-height:1.06;color:var(--white);margin-bottom:1.6rem;letter-spacing:-0.01em;}
+    .hero h1 em{font-style:italic;color:var(--mint);}
+    .hero-desc{font-size:1.1rem;line-height:1.8;color:rgba(168,213,181,0.85);max-width:580px;margin-bottom:2.8rem;}
+    .btn-row{display:flex;gap:1rem;flex-wrap:wrap;}
+    .btn-green{background:var(--leaf);color:var(--white);padding:0.95rem 2.2rem;border-radius:30px;font-weight:600;font-size:0.92rem;letter-spacing:0.03em;text-decoration:none;transition:background 0.25s,transform 0.2s,box-shadow 0.25s;display:inline-block;}
+    .btn-green:hover{background:var(--sage);transform:translateY(-2px);box-shadow:0 8px 28px rgba(61,139,90,0.4);}
+    .btn-ghost{border:1.5px solid rgba(168,213,181,0.4);color:var(--mint);padding:0.95rem 2.2rem;border-radius:30px;font-weight:500;font-size:0.92rem;text-decoration:none;transition:all 0.25s;display:inline-block;}
+    .btn-ghost:hover{border-color:var(--mint);color:var(--white);}
+    .scroll-cue{position:absolute;bottom:2.5rem;left:6%;display:flex;align-items:center;gap:0.6rem;color:rgba(168,213,181,0.5);font-size:0.75rem;letter-spacing:0.1em;}
+    .scroll-line{width:40px;height:1px;background:rgba(168,213,181,0.3);animation:sp 2s ease-in-out infinite;}
+    @keyframes sp{0%,100%{opacity:.3;width:40px}50%{opacity:1;width:60px}}
+
+    /* STATS */
+    .stats{background:var(--forest);padding:0 6%;display:grid;grid-template-columns:repeat(4,1fr);}
+    .stat{padding:2rem 1rem;text-align:center;border-right:1px solid rgba(106,170,125,0.12);}
+    .stat:last-child{border-right:none;}
+    .stat-val{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--mint);display:block;line-height:1;}
+    .stat-lbl{font-size:0.78rem;color:var(--sage);letter-spacing:0.06em;margin-top:0.3rem;display:block;}
+
+    /* SHARED */
+    .sec-tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--leaf);margin-bottom:0.8rem;}
+    .sec-tag::before{content:'';display:block;width:20px;height:1.5px;background:var(--leaf);}
+    h2.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.8vw,3rem);font-weight:600;line-height:1.18;color:var(--forest);margin-bottom:1.2rem;}
+    h2.sec-title.light{color:var(--white);}
+    .sec-body{font-size:0.975rem;line-height:1.85;color:var(--muted);}
+    .sec-body a{color:var(--leaf);text-decoration:underline;text-underline-offset:3px;transition:color 0.2s;}
+    .sec-body a:hover{color:var(--mid);}
+
+    /* INTRO */
+    .intro{padding:7rem 6%;background:var(--white);}
+    .intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1240px;margin:0 auto;}
+    .intro-text .sec-body{margin-bottom:1rem;}
+    .intro-visual{background:var(--pale);border-radius:12px;padding:2.8rem;border:1px solid var(--border);position:relative;overflow:hidden;}
+    .intro-visual::before{content:'';position:absolute;top:-30px;right:-30px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(61,139,90,0.12) 0%,transparent 70%);}
+    .pill-list{list-style:none;}
+    .pill-list li{display:flex;align-items:flex-start;gap:0.9rem;padding:0.9rem 0;border-bottom:1px solid rgba(61,139,90,0.1);font-size:0.9rem;color:var(--muted);line-height:1.5;}
+    .pill-list li:last-child{border-bottom:none;}
+    .pill-dot{flex-shrink:0;margin-top:4px;width:8px;height:8px;border-radius:50%;background:var(--leaf);}
+
+    /* SERVICES */
+    .services{padding:7rem 6%;background:var(--offwhite);}
+    .svc-header{text-align:center;max-width:680px;margin:0 auto 5rem;}
+    .svc-header .sec-tag{justify-content:center;}
+    .svc-header .sec-tag::before{display:none;}
+    .svc-header p{color:var(--muted);font-size:1rem;line-height:1.8;margin-top:1rem;}
+    .svc-block{display:grid;grid-template-columns:5fr 4fr;max-width:1240px;margin:0 auto 4.5rem;border-radius:14px;overflow:hidden;box-shadow:0 2px 50px rgba(26,58,42,0.07);}
+    .svc-block.flip{grid-template-columns:4fr 5fr;direction:rtl;}
+    .svc-block.flip>*{direction:ltr;}
+    .svc-copy{background:var(--white);padding:3.5rem 4rem;}
+    .svc-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;color:rgba(26,58,42,0.06);line-height:1;margin-bottom:0.1rem;}
+    .svc-copy h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;color:var(--forest);margin-bottom:1rem;line-height:1.25;}
+    .svc-copy p{font-size:0.93rem;line-height:1.85;color:var(--muted);margin-bottom:1.1rem;}
+    .svc-copy a{color:var(--leaf);text-decoration:underline;text-underline-offset:3px;}
+    .svc-kw{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:1.8rem;}
+    .kw{background:var(--pale);color:var(--mid);font-size:0.72rem;font-weight:600;letter-spacing:0.04em;padding:0.28rem 0.8rem;border-radius:20px;border:1px solid rgba(61,139,90,0.2);}
+    .svc-cta{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:600;color:var(--leaf);text-decoration:none;transition:gap 0.25s,color 0.2s;border-bottom:1.5px solid rgba(61,139,90,0.3);padding-bottom:2px;}
+    .svc-cta:hover{gap:0.8rem;color:var(--mid);}
+    .svc-panel{background:var(--forest);padding:3.5rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+    .svc-panel::after{content:'';position:absolute;bottom:-40px;right:-40px;width:200px;height:200px;border-radius:50%;border:40px solid rgba(106,170,125,0.08);}
+    .svc-panel::before{content:'';position:absolute;top:-60px;left:-60px;width:240px;height:240px;border-radius:50%;border:50px solid rgba(106,170,125,0.05);}
+    .panel-icon{font-size:3.2rem;margin-bottom:1.5rem;position:relative;z-index:1;}
+    .svc-panel h3{font-family:'Cormorant Garamond',serif;color:var(--mint);font-size:1.1rem;font-weight:600;margin-bottom:1.1rem;position:relative;z-index:1;}
+    .panel-points{list-style:none;position:relative;z-index:1;}
+    .panel-points li{color:rgba(168,213,181,0.85);font-size:0.85rem;padding:0.45rem 0;display:flex;align-items:flex-start;gap:0.7rem;line-height:1.5;border-bottom:1px solid rgba(106,170,125,0.08);}
+    .panel-points li:last-child{border-bottom:none;}
+    .panel-points li::before{content:'↳';color:var(--sage);flex-shrink:0;}
+
+    /* CO2 SECTION */
+    .co2-section{padding:7rem 6%;background:linear-gradient(135deg,var(--deep) 0%,var(--forest) 100%);position:relative;overflow:hidden;}
+    .co2-rings{position:absolute;left:-100px;top:50%;transform:translateY(-50%);width:600px;height:600px;opacity:0.05;}
+    .co2-rings circle{fill:none;stroke:var(--mint);}
+    .co2-inner{position:relative;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+    .co2-copy .sec-tag{color:var(--mint);}
+    .co2-copy .sec-tag::before{background:var(--mint);}
+    .co2-copy .sec-body{color:rgba(168,213,181,0.85);margin-bottom:1rem;}
+    .co2-copy .sec-body a{color:var(--mint);}
+    .co2-copy .btn-green{margin-top:1.5rem;}
+    .co2-cards{display:flex;flex-direction:column;gap:1rem;}
+    .co2-card{background:rgba(255,255,255,0.04);border:1px solid rgba(106,170,125,0.15);border-radius:10px;padding:1.6rem;transition:background 0.25s,border-color 0.25s;display:flex;gap:1.2rem;align-items:flex-start;}
+    .co2-card:hover{background:rgba(61,139,90,0.1);border-color:rgba(106,170,125,0.35);}
+    .co2-icon{font-size:1.75rem;flex-shrink:0;width:52px;height:52px;background:rgba(106,170,125,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+    .co2-text h4{font-family:'Cormorant Garamond',serif;color:var(--white);font-size:1rem;font-weight:600;margin-bottom:0.35rem;}
+    .co2-text p{color:rgba(168,213,181,0.75);font-size:0.82rem;line-height:1.65;}
+
+    /* ENERGY */
+    .energy-section{padding:7rem 6%;background:var(--white);}
+    .energy-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+    .energy-visual{background:var(--pale);border-radius:14px;padding:3rem;border:1px solid var(--border);position:sticky;top:100px;}
+    .energy-visual h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--forest);margin-bottom:1.5rem;}
+    .energy-metric{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0;border-bottom:1px solid rgba(61,139,90,0.1);}
+    .energy-metric:last-child{border-bottom:none;}
+    .metric-label{font-size:0.83rem;color:var(--muted);min-width:120px;}
+    .metric-bar-wrap{flex:1;margin:0 1rem;}
+    .metric-bar{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--leaf),var(--sage));}
+    .metric-val{font-size:0.85rem;font-weight:600;color:var(--leaf);white-space:nowrap;}
+    .energy-copy .sec-body{margin-bottom:1rem;}
+    .energy-copy .btn-green{margin-top:1.5rem;}
+
+    /* WHY US */
+    .why-section{padding:7rem 6%;background:var(--pale);}
+    .why-inner{max-width:1240px;margin:0 auto;}
+    .why-header{text-align:center;max-width:680px;margin:0 auto 4rem;}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+    .why-card{background:var(--white);border-radius:12px;padding:2.2rem;border:1px solid var(--border);transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s;}
+    .why-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(26,58,42,0.1);border-color:var(--sage);}
+    .why-icon{font-size:2.2rem;margin-bottom:1rem;}
+    .why-card h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:0.5rem;}
+    .why-card p{font-size:0.85rem;color:var(--muted);line-height:1.7;}
+
+    /* TIMELINE */
+    .process-section{padding:7rem 6%;background:var(--white);}
+    .process-inner{max-width:860px;margin:0 auto;}
+    .process-header{text-align:center;max-width:640px;margin:0 auto 4rem;}
+    .timeline{position:relative;padding-left:2.5rem;border-left:2px solid var(--border);}
+    .t-step{margin-bottom:3rem;position:relative;}
+    .t-step:last-child{margin-bottom:0;}
+    .t-dot{position:absolute;left:-3.05rem;width:20px;height:20px;border-radius:50%;background:var(--white);border:2px solid var(--leaf);display:flex;align-items:center;justify-content:center;top:2px;}
+    .t-dot::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--leaf);}
+    .t-num{font-family:'Cormorant Garamond',serif;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;color:var(--sage);text-transform:uppercase;margin-bottom:0.25rem;}
+    .t-step h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--forest);margin-bottom:0.4rem;}
+    .t-step p{font-size:0.88rem;color:var(--muted);line-height:1.75;}
+
+    /* CTA BANNER */
+    .cta-banner{padding:6rem 6%;background:var(--forest);text-align:center;position:relative;overflow:hidden;}
+    .cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(45,102,69,0.5) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 80% 50%,rgba(61,139,90,0.2) 0%,transparent 60%);}
+    .cta-leaf{position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:20rem;opacity:0.025;line-height:1;pointer-events:none;}
+    .cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);color:var(--white);margin-bottom:1rem;position:relative;font-weight:600;}
+    .cta-banner p{color:rgba(168,213,181,0.85);font-size:1.05rem;line-height:1.75;max-width:580px;margin:0 auto 2.5rem;position:relative;}
+    .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
+
+    /* FOOTER */
+    footer{background:var(--deep);border-top:1px solid rgba(106,170,125,0.12);padding:4rem 6%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+    .foot-brand p{color:rgba(106,170,125,0.6);font-size:0.875rem;line-height:1.75;margin-top:0.8rem;}
+    .foot-col h5{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage);margin-bottom:1.1rem;}
+    .foot-col a{display:block;color:rgba(168,213,181,0.55);text-decoration:none;font-size:0.875rem;margin-bottom:0.55rem;transition:color 0.2s;}
+    .foot-col a:hover{color:var(--mint);}
+    .foot-bottom{background:var(--deep);border-top:1px solid rgba(106,170,125,0.07);padding:1.4rem 6%;display:flex;justify-content:space-between;align-items:center;}
+    .foot-bottom p,.foot-bottom a{color:rgba(106,170,125,0.4);font-size:0.78rem;text-decoration:none;}
+    .foot-bottom a:hover{color:var(--sage);}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .intro-inner,.co2-inner,.energy-inner{grid-template-columns:1fr;gap:3rem;}
+      .svc-block,.svc-block.flip{grid-template-columns:1fr;direction:ltr;}
+      .why-grid{grid-template-columns:1fr 1fr;}
+      footer{grid-template-columns:1fr 1fr;}
+      .stats{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:640px){
+      .why-grid,.stats,footer{grid-template-columns:1fr;}
+      .nav-links{display:none;}
+      .energy-visual{position:static;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Green<span>Process</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Technology &amp; Process</a></li>
+    <li><a href="#">Engineering &amp; Design</a></li>
+    <li><a href="#">Industries</a></li>
+    <li><a href="#">Sustainability</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Talk to an Expert</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-rings" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="400" r="100" stroke-width="1"/>
+    <circle cx="400" cy="400" r="180" stroke-width="1"/>
+    <circle cx="400" cy="400" r="260" stroke-width="1"/>
+    <circle cx="400" cy="400" r="340" stroke-width="0.5"/>
+    <circle cx="400" cy="400" r="390" stroke-width="0.5"/>
+  </svg>
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Technology &amp; Process Solutions</div>
+    <h1>Pioneering <em>Sustainable</em> Process Technology for a Greener Industry</h1>
+    <p class="hero-desc">We engineer tomorrow's circular bioeconomy — delivering advanced fermentation systems, biogas upgrading, green chemistry platforms, carbon utilisation technology, and energy optimisation solutions that fundamentally transform how industry produces, consumes, and recovers value.</p>
+    <div class="btn-row">
+      <a href="#services" class="btn-green">Explore Our Solutions</a>
+      <a href="#contact" class="btn-ghost">Request a Free Consultation</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="scroll-line"></div>Scroll to explore</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><span class="stat-val">200+</span><span class="stat-lbl">Bioprocess Projects Delivered</span></div>
+  <div class="stat"><span class="stat-val">40%</span><span class="stat-lbl">Avg. Energy Reduction Achieved</span></div>
+  <div class="stat"><span class="stat-val">95%</span><span class="stat-lbl">CO₂ Capture Efficiency</span></div>
+  <div class="stat"><span class="stat-val">30+</span><span class="stat-lbl">Years in Green Process Engineering</span></div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-text">
+      <span class="sec-tag">Why Technology Choices Define Outcomes</span>
+      <h2 class="sec-title">The Right Process Technology Is the Foundation of Every Sustainable Plant</h2>
+      <p class="sec-body">The industrial transition to sustainability isn't happening through good intentions — it's happening through better engineering. Our <strong>technology and process solutions</strong> team combines deep scientific knowledge with hands-on implementation experience across <a href="#">fermentation, biogas upgrading, green chemistry, CO₂ recovery, and energy systems</a>.</p>
+      <p class="sec-body">Whether you're scaling a precision fermentation process, upgrading raw biogas to biomethane grid quality, developing a <a href="#green-chem">sustainable chemical production route</a>, or reducing your plant's energy consumption by 30–40%, we bring the process rigour, technology independence, and engineering credibility to make it happen — on time and on budget.</p>
+      <p class="sec-body">We don't just study these technologies — we've designed, commissioned, and optimised them across dozens of live industrial plants. See our <a href="#">full project portfolio</a> or <a href="#contact">speak with our process technology team</a> today.</p>
+    </div>
+    <div class="intro-visual">
+      <ul class="pill-list">
+        <li><span class="pill-dot"></span>Technology-independent selection — we recommend what works for your feedstock, not what we're licenced to sell</li>
+        <li><span class="pill-dot"></span>Full-spectrum bioprocess design from laboratory and pilot scale through commercial plant</li>
+        <li><span class="pill-dot"></span>Integrated green chemistry and sustainable process development capabilities</li>
+        <li><span class="pill-dot"></span>CO₂ recovery systems aligned with carbon credit and net-zero frameworks</li>
+        <li><span class="pill-dot"></span>Energy pinch analysis, heat integration, and utility optimisation in every design</li>
+        <li><span class="pill-dot"></span>Regulatory compliance — EU Taxonomy, ISCC+, RED II, and regional permitting</li>
+        <li><span class="pill-dot"></span>End-to-end support from feasibility through commissioning and operational training</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="svc-header">
+    <span class="sec-tag">Our Technology &amp; Process Capabilities</span>
+    <h2 class="sec-title">Five Integrated Solutions. One Circular Vision.</h2>
+    <p>All five technology services are available independently or as a fully integrated platform — with the flexibility to engage where you need us most and the assurance of a team that understands exactly how every system interconnects with the next.</p>
+  </div>
+
+  <!-- 01 FERMENTATION & DISTILLATION -->
+  <div class="svc-block">
+    <div class="svc-copy">
+      <div class="svc-num">01</div>
+      <h2>Fermentation &amp; Distillation Systems</h2>
+      <p>Precision fermentation is redefining how industry produces fuels, chemicals, pharmaceuticals, and bio-based ingredients. Our <strong>fermentation and distillation system design</strong> capability spans the full process chain — from strain selection and culture media optimisation through bioreactor engineering, downstream processing, and high-purity industrial distillation.</p>
+      <p>We design and engineer <strong>batch, fed-batch, and continuous fermentation systems</strong> for ethanol, organic acids, amino acids, enzymes, and specialty biochemicals. Our distillation engineering integrates energy-efficient column design, azeotropic separation, molecular sieve drying, and heat pump configurations to maximise product purity while cutting utility costs. See how our <a href="#energy">energy optimisation solutions</a> integrate with fermentation plant design to reduce operating costs by up to 35%.</p>
+      <div class="svc-kw">
+        <span class="kw">Bioreactor Design</span><span class="kw">Ethanol Production</span><span class="kw">Downstream Processing</span><span class="kw">Fractional Distillation</span><span class="kw">Molecular Sieve</span><span class="kw">Fed-Batch Fermentation</span><span class="kw">Scale-Up Engineering</span>
+      </div>
+      <a href="#contact" class="svc-cta">Design Your Fermentation System <span>→</span></a>
+    </div>
+    <div class="svc-panel">
+      <div class="panel-icon">🧬</div>
+      <h3>Key Deliverables</h3>
+      <ul class="panel-points">
+        <li>Fermentation process design &amp; mass balances</li>
+        <li>Bioreactor sizing, specification &amp; procurement support</li>
+        <li>Distillation column simulation &amp; design</li>
+        <li>Azeotropic &amp; extractive distillation systems</li>
+        <li>Product recovery &amp; purification design</li>
+        <li>CIP/SIP and GMP-compliant layouts</li>
+        <li>Scale-up from pilot to commercial plant</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 02 ANAEROBIC DIGESTION & BIOGAS -->
+  <div class="svc-block flip">
+    <div class="svc-copy">
+      <div class="svc-num">02</div>
+      <h2>Anaerobic Digestion &amp; Biogas Upgradation</h2>
+      <p>Anaerobic digestion is one of the most versatile and commercially proven technologies in the circular bioeconomy — simultaneously converting organic wastes into renewable energy, biomethane, and biofertiliser. Our <strong>AD system design and biogas upgradation</strong> services have delivered successful plants across agricultural, municipal, food &amp; beverage, and industrial wastewater sectors.</p>
+      <p>We engineer complete <strong>anaerobic digestion systems</strong> — from feedstock characterisation and pre-treatment through digester design, biogas collection, H₂S removal, and <strong>biogas upgrading to biomethane</strong> via pressure swing adsorption (PSA), water scrubbing, or membrane separation. Our biomethane plants consistently meet <a href="https://www.europarl.europa.eu/topics/en/article/20221013STO44927/what-is-biomethane-and-why-is-the-eu-pushing-for-more-of-it" target="_blank" rel="noopener noreferrer">EU grid injection quality standards</a>, unlocking access to green gas certificates and <a href="https://www.iscc-system.org/" target="_blank" rel="noopener noreferrer">ISCC sustainability certification</a>.</p>
+      <div class="svc-kw">
+        <span class="kw">Anaerobic Digestion</span><span class="kw">Biogas Upgrading</span><span class="kw">Biomethane Production</span><span class="kw">PSA Technology</span><span class="kw">CSTR &amp; UASB Digesters</span><span class="kw">Digestate Management</span>
+      </div>
+      <a href="#contact" class="svc-cta">Explore AD System Design <span>→</span></a>
+    </div>
+    <div class="svc-panel">
+      <div class="panel-icon">♻️</div>
+      <h3>AD &amp; Biogas Scope</h3>
+      <ul class="panel-points">
+        <li>Feedstock assessment &amp; substrate mapping</li>
+        <li>CSTR, UASB &amp; plug-flow digester design</li>
+        <li>H₂S &amp; siloxane removal systems</li>
+        <li>PSA, membrane &amp; water-wash upgrading</li>
+        <li>Grid injection &amp; CNG/LNG compression</li>
+        <li>Digestate post-treatment &amp; nutrient recovery</li>
+        <li>GHG accounting &amp; carbon credit strategy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 03 GREEN CHEMICAL PROCESS DEVELOPMENT -->
+  <div class="svc-block" id="green-chem">
+    <div class="svc-copy">
+      <div class="svc-num">03</div>
+      <h2>Green Chemical Process Development</h2>
+      <p>The shift from petrochemical feedstocks to bio-based, renewable, and waste-derived raw materials is accelerating — driven by policy, investor expectation, and genuine commercial opportunity. Our <strong>green chemical process development</strong> service helps manufacturers and innovators design, scale, and commercialise sustainable chemical production routes that are not just environmentally sound, but economically superior.</p>
+      <p>We apply the <a href="https://www.acs.org/greenchemistry/principles/12-principles-of-green-chemistry.html" target="_blank" rel="noopener noreferrer">12 Principles of Green Chemistry</a> as an engineering framework — systematically identifying opportunities to eliminate hazardous solvents, replace petrochemical inputs with bio-derived alternatives, improve atom economy, and reduce process waste at source. From <strong>continuous flow chemistry</strong> and catalytic process development to solvent substitution and process intensification, we design routes that are cleaner by design. This integrates directly with our <a href="#">engineering and design</a> and <a href="#energy">energy optimisation services</a> for end-to-end delivery.</p>
+      <div class="svc-kw">
+        <span class="kw">Green Chemistry</span><span class="kw">Bio-based Chemicals</span><span class="kw">Solvent Substitution</span><span class="kw">Flow Chemistry</span><span class="kw">Catalytic Processes</span><span class="kw">Atom Economy</span><span class="kw">Process Intensification</span>
+      </div>
+      <a href="#contact" class="svc-cta">Develop Your Green Process Route <span>→</span></a>
+    </div>
+    <div class="svc-panel">
+      <div class="panel-icon">🌿</div>
+      <h3>Process Development Scope</h3>
+      <ul class="panel-points">
+        <li>Bio-based feedstock feasibility &amp; sourcing</li>
+        <li>Green solvent selection &amp; substitution</li>
+        <li>Reaction pathway optimisation</li>
+        <li>Continuous flow chemistry design</li>
+        <li>Catalyst development &amp; screening support</li>
+        <li>Life cycle assessment (LCA) integration</li>
+        <li>Regulatory compliance (REACH, GHS, COSHH)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 04 CO₂ RECOVERY & UTILIZATION -->
+  <div class="svc-block flip" id="co2-service">
+    <div class="svc-copy">
+      <div class="svc-num">04</div>
+      <h2>CO₂ Recovery &amp; Utilization</h2>
+      <p>Most industrial plants are sitting on an untapped carbon asset — and don't know it. Our <strong>CO₂ recovery and utilisation</strong> engineering transforms captured carbon dioxide from a compliance cost into a genuine revenue stream. Whether you're in fermentation, biogas, cement, or chemical manufacturing, your CO₂ has commercial value — if it's properly captured, purified, and directed to the right application.</p>
+      <p>We engineer complete <strong>post-combustion CO₂ capture systems</strong>, amine scrubbing units, pressure swing adsorption (PSA) plants, and cryogenic CO₂ liquefaction for food-grade or industrial supply. Our utilisation pathway design spans <strong>CO₂-to-methanol synthesis</strong>, mineral carbonation, enhanced greenhouse cultivation, and industrial offtake agreements — all supported by carbon credit revenue modelling aligned with <a href="https://iea.org/reports/carbon-capture-utilisation-and-storage-2" target="_blank" rel="noopener noreferrer">IEA CCUS frameworks</a>. Every system integrates with our <a href="#energy-service">energy optimisation methodology</a> to minimise the capture energy penalty and maximise net GHG reduction.</p>
+      <div class="svc-kw">
+        <span class="kw">CO₂ Capture</span><span class="kw">Amine Scrubbing</span><span class="kw">PSA Purification</span><span class="kw">CO₂ Liquefaction</span><span class="kw">CO₂-to-Methanol</span><span class="kw">Carbon Credits</span><span class="kw">CCUS Engineering</span>
+      </div>
+      <a href="#contact" class="svc-cta">Monetise Your Carbon Streams <span>→</span></a>
+    </div>
+    <div class="svc-panel" style="background:var(--mid);">
+      <div class="panel-icon">🌐</div>
+      <h3>CO₂ Recovery Scope</h3>
+      <ul class="panel-points">
+        <li>Post-combustion &amp; biogenic CO₂ capture</li>
+        <li>Amine scrubbing &amp; PSA system design</li>
+        <li>Cryogenic purification &amp; liquefaction</li>
+        <li>Food-grade &amp; industrial CO₂ supply systems</li>
+        <li>CO₂-to-methanol &amp; utilisation pathways</li>
+        <li>Carbon credit &amp; EU ETS revenue modelling</li>
+        <li>Net-zero &amp; decarbonisation roadmap integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 05 ENERGY OPTIMIZATION SOLUTIONS -->
+  <div class="svc-block" id="energy-service">
+    <div class="svc-copy">
+      <div class="svc-num">05</div>
+      <h2>Energy Optimization Solutions</h2>
+      <p>Energy is typically the single largest operational cost in process plants — and the most actionable lever for both margin recovery and decarbonisation. Yet most plants are running 25–40% above their theoretical minimum energy consumption, simply because no one has applied a rigorous, systematic approach to finding and fixing the losses. That's exactly what we do.</p>
+      <p>Our <strong>energy optimisation solutions</strong> use advanced <strong>pinch analysis, heat exchanger network (HEN) redesign, steam system optimisation</strong>, and dynamic process simulation to locate precisely where energy is being destroyed and engineer cost-effective solutions to recover it. From distillation column retrofits and heat pump integration to combined heat and power (CHP) design and process scheduling changes, we implement — not just recommend. Our work follows <a href="https://www.iso.org/iso-50001-energy-management.html" target="_blank" rel="noopener noreferrer">ISO 50001 Energy Management</a> standards and aligns with the <a href="https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficiency-targets-directive-and-rules/energy-efficiency-directive_en" target="_blank" rel="noopener noreferrer">EU Energy Efficiency Directive</a>. Since every unit of energy you don't use is also carbon you don't emit, this service links directly to our <a href="#co2-service">CO₂ recovery and utilisation work</a>.</p>
+      <div class="svc-kw">
+        <span class="kw">Pinch Analysis</span><span class="kw">Heat Integration</span><span class="kw">HEN Optimisation</span><span class="kw">Steam System Design</span><span class="kw">CHP Engineering</span><span class="kw">Energy Audit</span><span class="kw">ISO 50001</span><span class="kw">Decarbonisation</span>
+      </div>
+      <a href="#contact" class="svc-cta">Start Your Energy Optimisation Audit <span>→</span></a>
+    </div>
+    <div class="svc-panel">
+      <div class="panel-icon">⚡</div>
+      <h3>Typical Savings We Deliver</h3>
+      <ul class="panel-points" style="margin-bottom:1.4rem;">
+        <li>Distillation &amp; separation — up to 40% energy reduction</li>
+        <li>Fermentation utility systems — up to 35% savings</li>
+        <li>Steam &amp; heat recovery networks — up to 45% improvement</li>
+        <li>Biogas plant parasitic load — up to 28% reduction</li>
+        <li>CO₂ capture energy penalty — up to 25% reduction</li>
+      </ul>
+      <!-- Mini interactive bar chart -->
+      <div style="position:relative;z-index:1;">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.55rem;">
+          <span style="font-size:0.72rem;color:var(--mint);min-width:90px;">Distillation</span>
+          <div style="flex:1;height:7px;background:rgba(168,213,181,0.12);border-radius:4px;overflow:hidden;">
+            <div style="width:82%;height:100%;background:linear-gradient(90deg,var(--mint),var(--sage));border-radius:4px;animation:barGrow 1.2s ease-out forwards;"></div>
+          </div>
+          <span style="font-size:0.72rem;color:var(--mint);font-weight:600;">40%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.55rem;">
+          <span style="font-size:0.72rem;color:var(--mint);min-width:90px;">Heat Recovery</span>
+          <div style="flex:1;height:7px;background:rgba(168,213,181,0.12);border-radius:4px;overflow:hidden;">
+            <div style="width:88%;height:100%;background:linear-gradient(90deg,var(--mint),var(--sage));border-radius:4px;"></div>
+          </div>
+          <span style="font-size:0.72rem;color:var(--mint);font-weight:600;">45%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.55rem;">
+          <span style="font-size:0.72rem;color:var(--mint);min-width:90px;">Fermentation</span>
+          <div style="flex:1;height:7px;background:rgba(168,213,181,0.12);border-radius:4px;overflow:hidden;">
+            <div style="width:70%;height:100%;background:linear-gradient(90deg,var(--mint),var(--sage));border-radius:4px;"></div>
+          </div>
+          <span style="font-size:0.72rem;color:var(--mint);font-weight:600;">35%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.55rem;">
+          <span style="font-size:0.72rem;color:var(--mint);min-width:90px;">Biogas Load</span>
+          <div style="flex:1;height:7px;background:rgba(168,213,181,0.12);border-radius:4px;overflow:hidden;">
+            <div style="width:60%;height:100%;background:linear-gradient(90deg,var(--mint),var(--sage));border-radius:4px;"></div>
+          </div>
+          <span style="font-size:0.72rem;color:var(--mint);font-weight:600;">28%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <span style="font-size:0.72rem;color:var(--mint);min-width:90px;">CO₂ Capture</span>
+          <div style="flex:1;height:7px;background:rgba(168,213,181,0.12);border-radius:4px;overflow:hidden;">
+            <div style="width:55%;height:100%;background:linear-gradient(90deg,var(--mint),var(--sage));border-radius:4px;"></div>
+          </div>
+          <span style="font-size:0.72rem;color:var(--mint);font-weight:600;">25%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CO2 SECTION -->
+<section class="co2-section" id="co2">
+  <svg class="co2-rings" viewBox="0 0 600 600">
+    <circle cx="300" cy="300" r="80" stroke-width="1"/>
+    <circle cx="300" cy="300" r="150" stroke-width="1"/>
+    <circle cx="300" cy="300" r="220" stroke-width="0.5"/>
+    <circle cx="300" cy="300" r="280" stroke-width="0.5"/>
+  </svg>
+  <div class="co2-inner">
+    <div class="co2-copy">
+      <span class="sec-tag">CO₂ Recovery &amp; Utilization</span>
+      <h2 class="sec-title light">Turn Your Carbon Emissions Into a Commercial Asset</h2>
+      <p class="sec-body">Carbon dioxide is no longer simply a liability — it's an emerging industrial feedstock. Our <strong>CO₂ recovery and utilisation</strong> solutions help plants capture, purify, and productively deploy their carbon dioxide streams, generating real revenue from what was previously vented to atmosphere.</p>
+      <p class="sec-body">We engineer <strong>post-combustion CO₂ capture systems</strong>, amine scrubbing and pressure swing adsorption units, cryogenic CO₂ purification, and CO₂ liquefaction for food-grade or industrial applications. Our utilisation pathway design covers <strong>CO₂-to-methanol</strong>, CO₂-enhanced cultivation, mineral carbonation, and supply to industrial offtakers. This work aligns with <a href="https://iea.org/reports/carbon-capture-utilisation-and-storage-2" target="_blank" rel="noopener noreferrer">IEA CCUS frameworks</a> and supports <a href="#">net-zero decarbonisation roadmaps</a>.</p>
+      <p class="sec-body">Every CO₂ recovery system we design integrates with our <a href="#energy">energy optimisation methodology</a>, ensuring the capture process is as energy-lean as possible — a critical factor in whole-system GHG accounting and carbon credit qualification.</p>
+      <a href="#contact" class="btn-green">Explore CO₂ Recovery Solutions</a>
+    </div>
+    <div class="co2-cards">
+      <div class="co2-card">
+        <div class="co2-icon">🏭</div>
+        <div class="co2-text">
+          <h4>Post-Combustion CO₂ Capture</h4>
+          <p>Amine scrubbing, PSA, and membrane-based CO₂ capture systems for process industries, cement, steel, and power generation.</p>
+        </div>
+      </div>
+      <div class="co2-card">
+        <div class="co2-icon">❄️</div>
+        <div class="co2-text">
+          <h4>CO₂ Purification &amp; Liquefaction</h4>
+          <p>Food-grade and industrial CO₂ purification, liquefaction, and storage — enabling direct revenue streams from captured carbon.</p>
+        </div>
+      </div>
+      <div class="co2-card">
+        <div class="co2-icon">⚗️</div>
+        <div class="co2-text">
+          <h4>CO₂ Utilization Pathways</h4>
+          <p>Engineering for CO₂-to-methanol, synthetic fuels, enhanced oil recovery, greenhouse agriculture, and mineralisation applications.</p>
+        </div>
+      </div>
+      <div class="co2-card">
+        <div class="co2-icon">📊</div>
+        <div class="co2-text">
+          <h4>Carbon Credit Strategy</h4>
+          <p>Techno-economic modelling for EU ETS compliance, voluntary carbon market participation, and carbon credit revenue optimisation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENERGY OPTIMIZATION -->
+<section class="energy-section" id="energy">
+  <div class="energy-inner">
+    <div class="energy-visual">
+      <h3>Typical Energy Savings We Deliver</h3>
+      <div class="energy-metric">
+        <span class="metric-label">Distillation Systems</span>
+        <div class="metric-bar-wrap"><div class="metric-bar" style="width:82%"></div></div>
+        <span class="metric-val">Up to 40%</span>
+      </div>
+      <div class="energy-metric">
+        <span class="metric-label">Fermentation Utilities</span>
+        <div class="metric-bar-wrap"><div class="metric-bar" style="width:70%"></div></div>
+        <span class="metric-val">Up to 35%</span>
+      </div>
+      <div class="energy-metric">
+        <span class="metric-label">Biogas Plant Parasitic Load</span>
+        <div class="metric-bar-wrap"><div class="metric-bar" style="width:60%"></div></div>
+        <span class="metric-val">Up to 28%</span>
+      </div>
+      <div class="energy-metric">
+        <span class="metric-label">CO₂ Capture Energy Penalty</span>
+        <div class="metric-bar-wrap"><div class="metric-bar" style="width:55%"></div></div>
+        <span class="metric-val">Up to 25%</span>
+      </div>
+      <div class="energy-metric">
+        <span class="metric-label">Steam &amp; Heat Recovery</span>
+        <div class="metric-bar-wrap"><div class="metric-bar" style="width:88%"></div></div>
+        <span class="metric-val">Up to 45%</span>
+      </div>
+    </div>
+    <div class="energy-copy">
+      <span class="sec-tag">Energy Optimization Solutions</span>
+      <h2 class="sec-title">Cut Energy Costs. Cut Emissions. Strengthen Margins.</h2>
+      <p class="sec-body">Energy is typically the single largest operating cost in process industries — and the greatest lever available for both margin improvement and decarbonisation. Our <strong>energy optimisation solutions</strong> apply rigorous process integration methodology to identify, quantify, and implement energy savings that fundamentally transform plant economics.</p>
+      <p class="sec-body">Using advanced <strong>pinch analysis, heat exchanger network optimisation, steam system redesign</strong>, and process simulation, we identify precisely where energy is being wasted and how it can be recovered. We then engineer the modifications — new heat exchange configurations, heat pump integration, combined heat and power (CHP) systems, or process scheduling changes — and support implementation through to commissioning.</p>
+      <p class="sec-body">Our energy optimisation work follows <a href="https://www.iso.org/iso-50001-energy-management.html" target="_blank" rel="noopener noreferrer">ISO 50001 Energy Management System</a> principles and is compatible with <a href="https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficiency-targets-directive-and-rules/energy-efficiency-directive_en" target="_blank" rel="noopener noreferrer">EU Energy Efficiency Directive</a> compliance reporting. It integrates naturally with our <a href="#co2">CO₂ recovery engineering</a> — because the least expensive carbon to capture is the carbon you never generate.</p>
+      <a href="#contact" class="btn-green">Get Your Energy Audit Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="why-inner">
+    <div class="why-header">
+      <span class="sec-tag">Why Technology Leaders Choose Us</span>
+      <h2 class="sec-title">Deep Science. Real Engineering. Commercial Results.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <h3>Scientific Rigour from Lab to Plant</h3>
+        <p>Our team includes PhDs, biochemical engineers, and process chemists who've worked at bench scale and commercial scale — understanding both the science and the engineering compromises that turn theory into operational reality.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚖️</div>
+        <h3>Technology-Neutral Recommendations</h3>
+        <p>We're not licenced to sell any particular technology. We evaluate every viable solution on technical and commercial merits — then recommend and implement what's genuinely best for your plant and your sustainability goals.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h3>Sustainability as an Engineering Discipline</h3>
+        <p>We treat sustainability metrics — carbon intensity, water footprint, waste generation — with the same rigour as yield and throughput. LCA is part of our design process, not a post-hoc compliance exercise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔗</div>
+        <h3>Circular Economy Integration</h3>
+        <p>We design systems that close loops — where one plant's waste becomes another's feedstock. Our integrated approach across fermentation, biogas, CO₂ recovery, and green chemistry creates genuine circularity, not just compliance.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📐</div>
+        <h3>Seamless Engineering Handover</h3>
+        <p>Our process technology work flows directly into detailed engineering — PFDs, P&IDs, equipment specs, and plant layout — eliminating the costly errors that occur when technology consultants hand off to separate engineering firms.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <h3>Bankable Techno-Economic Analysis</h3>
+        <p>Every technology recommendation is underpinned by rigorous techno-economic modelling. Our feasibility studies and investment cases are designed to withstand lender scrutiny and board-level due diligence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="process-section">
+  <div class="process-inner">
+    <div class="process-header">
+      <span class="sec-tag">How We Deliver</span>
+      <h2 class="sec-title">From Concept to Commissioned Plant — A Structured Journey</h2>
+    </div>
+    <div class="timeline">
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <div class="t-num">Phase 01</div>
+        <h4>Technology Screening &amp; Feasibility</h4>
+        <p>We assess your feedstocks, products, site conditions, and commercial targets to identify the most viable technology routes — with preliminary CAPEX/OPEX modelling and a clear recommendation before any significant capital commitment is made.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <div class="t-num">Phase 02</div>
+        <h4>Process Design &amp; Technology Development</h4>
+        <p>Detailed process design including mass and energy balances, process simulation, equipment sizing, and utility system design. Where required, we support or manage pilot-scale testing to de-risk technology selection at commercial scale.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <div class="t-num">Phase 03</div>
+        <h4>Basic Engineering &amp; HAZOP Integration</h4>
+        <p>FEED-level engineering package development, fully integrated with safety review (HAZOP/LOPA) and regulatory compliance mapping — delivered as a single coherent document set ready for detailed design or EPC tender.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <div class="t-num">Phase 04</div>
+        <h4>Detailed Engineering &amp; Procurement Support</h4>
+        <p>Complete detailed engineering through to construction-ready documentation, with vendor pre-qualification, technical bid evaluation, and procurement support for critical long-lead process equipment.</p>
+      </div>
+      <div class="t-step">
+        <div class="t-dot"></div>
+        <div class="t-num">Phase 05</div>
+        <h4>Commissioning &amp; Performance Optimisation</h4>
+        <p>On-site commissioning support, start-up assistance, and performance testing — followed by ongoing operational optimisation and team training to ensure design performance is achieved and sustained from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner" id="contact">
+  <div class="cta-leaf">🌿</div>
+  <h2>Ready to Build a Cleaner, More Profitable Process?</h2>
+  <p>Whether you have a defined project scope or an early-stage concept, our technology and process solutions team is ready to help you assess, design, and deliver it. Most initial consultations are structured and delivered within 5 working days.</p>
+  <div class="cta-row">
+    <a href="/cdn-cgi/l/email-protection#177e797178577065727279676578747264643974787a" class="btn-green">Request a Technology Consultation</a>
+    <a href="tel:+18000000000" class="btn-ghost">Speak to Our Engineers</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-brand">
+    <div class="logo" style="font-size:1.5rem;">Green<span style="color:var(--sage)">Process</span></div>
+    <p>Advanced technology and process solutions for the sustainable industrial transition — delivering cleaner chemistry, greener energy, and circular process systems worldwide.</p>
+  </div>
+  <div class="foot-col">
+    <h5>Our Solutions</h5>
+    <a href="#services">Fermentation &amp; Distillation</a>
+    <a href="#services">Anaerobic Digestion &amp; Biogas</a>
+    <a href="#green-chem">Green Chemical Development</a>
+    <a href="#co2-service">CO₂ Recovery &amp; Utilization</a>
+    <a href="#energy-service">Energy Optimization</a>
+  </div>
+  <div class="foot-col">
+    <h5>Industries</h5>
+    <a href="#">Biofuels &amp; Biorefining</a>
+    <a href="#">Pharmaceuticals</a>
+    <a href="#">Food &amp; Beverage</a>
+    <a href="#">Specialty Chemicals</a>
+    <a href="#">Waste Treatment</a>
+  </div>
+  <div class="foot-col">
+    <h5>Company</h5>
+    <a href="#">About Us</a>
+    <a href="#">Project Portfolio</a>
+    <a href="#">Sustainability Report</a>
+    <a href="#">Careers</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+<div class="foot-bottom">
+  <p>© 2025 GreenProcess. All rights reserved.</p>
+  <div><a href="#">Privacy Policy</a>&nbsp;·&nbsp;<a href="#">Terms of Use</a>&nbsp;·&nbsp;<a href="#">Cookie

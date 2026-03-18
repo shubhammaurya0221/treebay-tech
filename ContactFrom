@@ -1,0 +1,61 @@
+
+/* Green & White Theme Styles */
+:root {
+  --primary-green: #15803d; /* Tailwind green-700 */
+  --light-green: #f0fdf4;   /* Tailwind green-50 */
+  --border-green: #bbf7d0;  /* Tailwind green-200 */
+}
+
+.green-form-container {
+  background: linear-gradient(135deg, #ffffff 0%, var(--light-green) 100%);
+  border: 1px solid var(--border-green);
+  box-shadow: 0 10px 25px -5px rgba(21, 128, 61, 0.1);
+}
+
+.green-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-green);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  color: #166534;
+}
+
+.green-input:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 4px rgba(21, 128, 61, 0.1);
+}
+
+.green-input::placeholder {
+  color: #86efac; /* Lighter green for placeholder */
+}
+
+.green-btn {
+  background-color: var(--primary-green);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.green-btn:hover:not(:disabled) {
+  background-color: #166534;
+  transform: translateY(-1px);
+}
+
+.green-btn:active {
+  transform: translateY(0);
+} 
+
+/* CTA BANNER */
+.cta-banner{padding:6rem 6%;background:var(--forest);text-align:center;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(45,102,69,0.5) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 80% 50%,rgba(61,139,90,0.2) 0%,transparent 60%);}
+.cta-leaf{position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:20rem;opacity:0.025;line-height:1;pointer-events:none;}
+.cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);color:var(--white);margin-bottom:1rem;position:relative;font-weight:600;}
+.cta-banner p{color:rgba(168,213,181,0.85);font-size:1.05rem;line-height:1.75;max-width:580px;margin:0 auto 2.5rem;position:relative;}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
