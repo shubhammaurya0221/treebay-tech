@@ -251,7 +251,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav className="nav-inner">
         <div className="logo">Green<span>Process</span></div>
 
         {/* ── Desktop links ── */}
@@ -264,7 +264,7 @@ const Navbar = () => {
         </ul>
 
         {/* ── Desktop CTA ── */}
-        <a href="#contact" className="nav-cta nav-cta--desktop">Talk to an Expert</a>
+        <a href="#contact" className="btn-green nav-cta--desktop">Talk to an Expert</a>
 
         {/* ── Hamburger (mobile only) ── */}
         <button

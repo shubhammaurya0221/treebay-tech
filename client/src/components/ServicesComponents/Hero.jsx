@@ -12,15 +12,14 @@ const Hero = () => {
         <circle cx="400" cy="400" r="340" strokeWidth="0.5" />
         <circle cx="400" cy="400" r="390" strokeWidth="0.5" />
       </svg>
-      <div className="hero-mesh"></div>
-      <div className="hero-grid"></div>
+      {/* <div className="hero-grid"></div> */}
       <div className="hero-content">
         <div className="eyebrow">Technology &amp; Process Solutions</div>
         <h1>
           Pioneering <em>Sustainable</em> Process Technology for a Greener
           Industry
         </h1>
-        <p className="hero-desc">
+        <p className="hero-desc ">
           We engineer tomorrow's circular bioeconomy — delivering advanced
           fermentation systems, biogas upgrading, green chemistry platforms,
           carbon utilisation technology, and energy optimisation solutions that

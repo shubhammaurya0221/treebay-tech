@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../css/AdminDashboard.css';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
