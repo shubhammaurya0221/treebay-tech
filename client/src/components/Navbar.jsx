@@ -98,7 +98,7 @@ const TECH_FEATURED = {
   stat2: { val: "12k",  lbl: "tCO₂e / yr"       },
 };
 
-/* ── Chevron ────────────────────────────────────── */
+/* ── Chevron Arrow Icon────────────────────────────────────── */
 const Chevron = ({ open, cls = "nav-chevron" }) => (
   <svg className={`${cls}${open ? ` ${cls}--open` : ""}`} viewBox="0 0 10 6" fill="none">
     <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

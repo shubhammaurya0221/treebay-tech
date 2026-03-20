@@ -244,7 +244,7 @@ const Services = () => {
             Monetise Your Carbon Streams <span>→</span>
           </a>
         </div>
-        <div className="svc-panel" style={{ background: "var(--mid)" }}>
+        <div className="svc-panel" style={{ background: "var(--pale)" }}>
           <div className="panel-icon">🌐</div>
           <h3>CO₂ Recovery Scope</h3>
           <ul className="panel-points">
@@ -327,232 +327,50 @@ const Services = () => {
             <li>CO₂ capture energy penalty — up to 25% reduction</li>
           </ul>
           {/* Mini interactive bar chart */}
-          <div style={{ position: "relative", zIndex: 1 }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                marginBottom: "0.55rem",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  minWidth: "90px",
-                }}
-              >
-                Distillation
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: "7px",
-                  background: "rgba(168,213,181,0.12)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                }}
-              >
+          <div className="energy-visual">
+            <h3>Typical Energy Savings We Deliver</h3>
+
+            <div className="energy-metric">
+              <span className="metric-label">Distillation</span>
+              <div className="metric-bar-wrap">
                 <div
-                  style={{
-                    width: "82%",
-                    height: "100%",
-                    background:
-                      "linear-gradient(90deg,var(--mint),var(--sage))",
-                    borderRadius: "4px",
-                    animation: "barGrow 1.2s ease-out forwards",
-                  }}
+                  className="metric-bar"
+                  style={{ width: "82%", animation: "barGrow 1.2s ease-out forwards" }}
                 ></div>
               </div>
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  fontWeight: 600,
-                }}
-              >
-                40%
-              </span>
+              <span className="metric-val">40%</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                marginBottom: "0.55rem",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  minWidth: "90px",
-                }}
-              >
-                Heat Recovery
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: "7px",
-                  background: "rgba(168,213,181,0.12)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    width: "88%",
-                    height: "100%",
-                    background:
-                      "linear-gradient(90deg,var(--mint),var(--sage))",
-                    borderRadius: "4px",
-                  }}
-                ></div>
+
+            <div className="energy-metric">
+              <span className="metric-label">Heat Recovery</span>
+              <div className="metric-bar-wrap">
+                <div className="metric-bar" style={{ width: "88%" }}></div>
               </div>
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  fontWeight: 600,
-                }}
-              >
-                45%
-              </span>
+              <span className="metric-val">45%</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                marginBottom: "0.55rem",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  minWidth: "90px",
-                }}
-              >
-                Fermentation
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: "7px",
-                  background: "rgba(168,213,181,0.12)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    width: "70%",
-                    height: "100%",
-                    background:
-                      "linear-gradient(90deg,var(--mint),var(--sage))",
-                    borderRadius: "4px",
-                  }}
-                ></div>
+
+            <div className="energy-metric">
+              <span className="metric-label">Fermentation</span>
+              <div className="metric-bar-wrap">
+                <div className="metric-bar" style={{ width: "70%" }}></div>
               </div>
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  fontWeight: 600,
-                }}
-              >
-                35%
-              </span>
+              <span className="metric-val">35%</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                marginBottom: "0.55rem",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  minWidth: "90px",
-                }}
-              >
-                Biogas Load
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: "7px",
-                  background: "rgba(168,213,181,0.12)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    width: "60%",
-                    height: "100%",
-                    background:
-                      "linear-gradient(90deg,var(--mint),var(--sage))",
-                    borderRadius: "4px",
-                  }}
-                ></div>
+
+            <div className="energy-metric">
+              <span className="metric-label">Biogas Load</span>
+              <div className="metric-bar-wrap">
+                <div className="metric-bar" style={{ width: "60%" }}></div>
               </div>
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  fontWeight: 600,
-                }}
-              >
-                28%
-              </span>
+              <span className="metric-val">28%</span>
             </div>
-            <div
-              style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}
-            >
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  minWidth: "90px",
-                }}
-              >
-                CO₂ Capture
-              </span>
-              <div
-                style={{
-                  flex: 1,
-                  height: "7px",
-                  background: "rgba(168,213,181,0.12)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                }}
-              >
-                <div
-                  style={{
-                    width: "55%",
-                    height: "100%",
-                    background:
-                      "linear-gradient(90deg,var(--mint),var(--sage))",
-                    borderRadius: "4px",
-                  }}
-                ></div>
+
+            <div className="energy-metric">
+              <span className="metric-label">CO₂ Capture</span>
+              <div className="metric-bar-wrap">
+                <div className="metric-bar" style={{ width: "55%" }}></div>
               </div>
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  color: "var(--mint)",
-                  fontWeight: 600,
-                }}
-              >
-                25%
-              </span>
+              <span className="metric-val">25%</span>
             </div>
           </div>
         </div>

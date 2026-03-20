@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 
-const ADMIN_EMAIL    = 'treebaytech@gmail.com';
-const ADMIN_PASSWORD = '12345';
+const ADMIN_EMAIL    = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 // POST /api/admin/login
 router.post('/login', (req, res) => {

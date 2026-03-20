@@ -9,7 +9,7 @@ const CO2Section = () => {
       </svg>
       <div className="co2-inner">
         <div className="co2-copy">
-          <span className="sec-tag">CO₂ Recovery &amp; Utilization</span>
+          <span className="sec-tag" style={{color:"#1a3a2a"}}>CO₂ Recovery &amp; Utilization</span>
           <h2 className="sec-title light">
             Turn Your Carbon Emissions Into a Commercial Asset
           </h2>
