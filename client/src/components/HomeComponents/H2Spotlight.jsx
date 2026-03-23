@@ -2,7 +2,7 @@ import React from 'react';
 
 const H2Spotlight = () => {
     return (
-        <div className="h2-spotlight" id="green-hydrogen">
+        <div className="h2-spotlight overflow-hidden" id="green-hydrogen">
             <div className="h2-left">
                 <div className="section-tag-h2">Featured Capability</div>
                 <h2 className="h2-spot-title">
@@ -21,30 +21,50 @@ const H2Spotlight = () => {
             </div>
 
             <div className="h2-right">
+
                 <div className="h2-stat-grid">
                     <div className="h2-stat">
                         <div className="h2-stat-val">5 MMT</div>
-                        <div className="h2-stat-label">Target annual green hydrogen production by 2030</div>
+                        <div className="h2-stat-label">
+                            Target annual green hydrogen production by 2030
+                        </div>
                     </div>
+
                     <div className="h2-stat">
                         <div className="h2-stat-val">₹8L Cr</div>
-                        <div className="h2-stat-label">Projected market opportunity for hydrogen in India</div>
+                        <div className="h2-stat-label">
+                            Projected market opportunity for hydrogen in India
+                        </div>
                     </div>
+
                     <div className="h2-stat">
                         <div className="h2-stat-val">600K</div>
-                        <div className="h2-stat-label">Jobs expected to be created in the sector by 2030</div>
+                        <div className="h2-stat-label">
+                            Jobs expected to be created in the sector by 2030
+                        </div>
                     </div>
+
                     <div className="h2-stat">
                         <div className="h2-stat-val">50 GW</div>
-                        <div className="h2-stat-label">Electrolysis capacity to be installed across India</div>
+                        <div className="h2-stat-label">
+                            Electrolysis capacity to be installed across India
+                        </div>
                     </div>
                 </div>
+
                 <div className="h2-note">
                     <p>
-                        🔗 <strong>Reference:</strong> Latest updates on India's hydrogen policies at the
-                        <a href="https://mnre.gov.in/national-green-hydrogen-mission" target="_blank" rel="noopener noreferrer"> MNRE — NGHM portal</a>.
+                        🔗 <strong>Reference:</strong> Latest updates on India's hydrogen policies at the{" "}
+                        <a
+                            href="https://mnre.gov.in/national-green-hydrogen-mission"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            MNRE — NGHM portal
+                        </a>.
                     </p>
                 </div>
+
             </div>
         </div>
     );

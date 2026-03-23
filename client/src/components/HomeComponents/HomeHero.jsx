@@ -18,7 +18,7 @@ const HomeHero = () => {
       <div className="hero-content">
         <div className="eyebrow">Engineering · Innovation · Sustainability</div>
         <h1>
-          Pioneering <em>Green Hydrogen</em> & Industrial Engineering Solutions
+          Pioneering <em>Green Hydrogen</em> & Energy Solutions
         </h1>
         <p className="hero-desc">
           <strong>Treebay Technology</strong> is India's forward-thinking engineering company delivering 

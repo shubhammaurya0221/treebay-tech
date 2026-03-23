@@ -23,7 +23,9 @@ const validate = (fields) => {
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
     errs.email = "Please enter a valid email address.";
   }
-  if (fields.phone && !/^[+\d\s\-().]{7,20}$/.test(fields.phone)) {
+  if (!fields.phone.trim()) {
+    errs.phone = "Phone number is required.";
+  } else if (!/^[+\d\s\-().]{7,20}$/.test(fields.phone)) {
     errs.phone = "Please enter a valid phone number.";
   }
   if (!fields.service) errs.service = "Please select a service.";
@@ -249,16 +251,6 @@ const ContactForm = () => {
               <div className="form-group">
                 <label htmlFor="cf-phone">
                   Phone{" "}
-                  <span
-                    style={{
-                      color: "var(--ltxt)",
-                      fontSize: "0.7rem",
-                      fontWeight: 400,
-                      letterSpacing: 0,
-                    }}
-                  >
-                    (optional)
-                  </span>
                 </label>
                 <input
                   id="cf-phone"

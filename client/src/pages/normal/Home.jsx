@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import '../css/Home.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import '../../css/normal/Home.css';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 // Home Components
-import HomeHero from '../components/HomeComponents/HomeHero';
-import HomeStats from '../components/HomeComponents/HomeStats';
-import MissionBanner from '../components/HomeComponents/MissionBanner';
-import HomeServices from '../components/HomeComponents/HomeServices';
-import H2Spotlight from '../components/HomeComponents/H2Spotlight';
-import Industries from '../components/HomeComponents/Industries';
-import Testimonials from '../components/HomeComponents/Testimonials';
-import FAQ from '../components/HomeComponents/FAQ';
-import HomeResources from '../components/HomeComponents/HomeResources';
-import HomeCTA from '../components/HomeComponents/HomeCTA';
-// import WhyUs from '../components/HomeComponents/WhyUs';
-// import ProcessTimeline from '../components/HomeComponents/ProcessTimeline';
+import HomeHero from '../../components/HomeComponents/HomeHero';
+import HomeStats from '../../components/HomeComponents/HomeStats';
+import HomeServices from '../../components/HomeComponents/HomeServices';
+import H2Spotlight from '../../components/HomeComponents/H2Spotlight';
+import Industries from '../../components/HomeComponents/Industries';
+import Testimonials from '../../components/HomeComponents/Testimonials';
+import FAQ from '../../components/HomeComponents/FAQ';
+import HomeResources from '../../components/HomeComponents/HomeResources';
+import HomeCTA from '../../components/HomeComponents/HomeCTA';
+import WhyUs from '../../components/HomeComponents/WhyUs';
+import Intro from '../../components/HomeComponents/Intro';
+import ContactForm from '../../components/ContactForm';
 
 function Home() {
     useEffect(() => {
@@ -37,13 +37,11 @@ function Home() {
             <Navbar />
             <HomeHero />
             <HomeStats />
-            {/* <MissionBanner /> */}
+            <Intro />
             <HomeServices />
             <H2Spotlight />
             <Industries />
-            
-            {/* Reusing WhyUs and ProcessTimeline from the general components, assuming they fit the design */}
-            {/* <WhyUs /> */}
+            <WhyUs />
             
             <section className="projects-strip">
                 <div className="projects-strip-content">
@@ -58,9 +56,9 @@ function Home() {
 
             <Testimonials />
             <HomeResources />
-            {/* <ProcessTimeline /> */}
             <FAQ />
             <HomeCTA />
+            <ContactForm />
             <Footer />
         </div>
     );

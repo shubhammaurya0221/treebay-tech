@@ -32,7 +32,7 @@ const DistilleryPlantFAQ = () => {
         faqBtns.forEach(btn => btn.addEventListener('click', handleFaqClick));
 
         return () => {
-             faqBtns.forEach(btn => btn.removeEventListener('click', handleFaqClick));
+            faqBtns.forEach(btn => btn.removeEventListener('click', handleFaqClick));
         }
     }, []);
 
@@ -51,71 +51,116 @@ const DistilleryPlantFAQ = () => {
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">What is the National Green Hydrogen Mission and how does Treebay Technology support it?</span>
+                            <span className="faq-q">What makes Treebay Technology a leading distillery plant manufacturer in India?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>The <a href="https://mnre.gov.in/national-green-hydrogen-mission" target="_blank" rel="noopener noreferrer"><strong>National Green Hydrogen Mission</strong></a> is India's flagship programme to produce 5 MMT of <strong>green hydrogen</strong> per year by 2030. Treebay Technology is an approved engineering partner. We design and build complete <strong>green hydrogen plant</strong> infrastructure — including water electrolysis systems, <strong>hydrogen gas</strong> compression and storage, and renewable energy integration. <a href="/services/green-hydrogen">Learn more →</a></p>
+                            <p>
+                                <strong>Treebay Technology</strong> is a trusted <strong>distillery plant manufacturer in India</strong> delivering
+                                end-to-end ethanol and distillation solutions. Our expertise includes
+                                <strong> fermentation systems</strong>, <strong>multi-pressure distillation</strong>,
+                                <strong> evaporation & ZLD systems</strong>, and <strong>plant automation</strong>.
+                                We focus on maximizing <strong>alcohol yield</strong>, improving
+                                <strong> energy efficiency</strong>, and ensuring long-term operational reliability.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">What does a complete food processing unit project include?</span>
+                            <span className="faq-q">What types of feedstock can your ethanol plants process?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>Our <strong>food processing unit</strong> projects are fully turnkey — from site survey and layout design to equipment selection, civil construction, mechanical and electrical installation, commissioning, and operator training. We serve the entire <strong>food processing industry</strong> spectrum including fruits, dairy, grains, beverages, and ready-to-eat segments. All <strong>food processing</strong> plants meet FSSAI, BIS, and international food safety standards. <a href="/services/food-processing">Explore food processing services →</a></p>
+                            <p>
+                                Our <strong>ethanol plant solutions</strong> are designed for
+                                <strong> multi-feedstock processing</strong>, including
+                                <strong> molasses</strong>, <strong> cane syrup</strong>, and
+                                <strong> grain-based distilleries</strong>. This flexibility allows distillery operators
+                                to switch feedstock based on availability and cost, ensuring
+                                <strong> consistent production</strong> and improved profitability.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">What types of cutting machines and industrial equipment do you manufacture?</span>
+                            <span className="faq-q">How do your distillation systems improve energy efficiency?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>As registered <strong>machine manufacturers</strong>, we produce a wide range of industrial equipment. Our <strong>cutting machine</strong> range includes plasma, laser, hydraulic shearing, and CNC cutting machines. Our broader <strong>machine manufacturing</strong> portfolio covers conveyor systems, hydraulic presses, mixing and filling machines, and custom automation lines — all designed, fabricated, and tested in our own facility. <a href="/services/machine-manufacturing">Browse the machine catalogue →</a></p>
+                            <p>
+                                Our <strong>distillation systems</strong> use advanced
+                                <strong> multi-pressure column design</strong> and
+                                <strong> heat integration techniques</strong> to significantly reduce
+                                steam consumption. This results in
+                                <strong> lower energy costs</strong>, higher throughput, and
+                                improved overall <strong>process efficiency</strong>.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">What fabrication works standards and certifications do you hold?</span>
+                            <span className="faq-q">What is Zero Liquid Discharge (ZLD) and why is it important for distilleries?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>Our <strong>fabrication works</strong> division is ISO 9001:2015 certified and compliant with ASME, IS 2062, AWS D1.1, and other standards. We perform structural steel fabrication, pressure vessel manufacturing, heat exchanger fabrication, and custom piping assemblies with CNC plasma <strong>cutting machine</strong> beds, submerged arc welding, and full NDT inspection. <a href="/services/fabrication-works">See fabrication capabilities →</a></p>
+                            <p>
+                                <strong>Zero Liquid Discharge (ZLD)</strong> ensures that no industrial wastewater is released into the environment.
+                                Our <strong>evaporation and condensate recovery systems</strong> enable complete effluent recycling,
+                                helping distilleries achieve <strong>environmental compliance</strong>, reduce
+                                <strong> water consumption</strong>, and operate sustainably.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">How is green hydrogen different from hydrogen peroxide or disodium hydrogen citrate syrup?</span>
+                            <span className="faq-q">How do you ensure high alcohol yield in ethanol production?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p><strong>Green hydrogen</strong> is produced through electrolysis of water powered by renewable energy — zero carbon. Regular <strong>hydrogen</strong> (grey/blue) comes from fossil fuels. <strong>Hydrogen peroxide</strong> (H₂O₂) is a different compound — an oxidising agent for industrial bleaching and disinfection. <strong>Disodium hydrogen citrate syrup</strong> is a pharmaceutical product from citric acid chemistry — unrelated to <strong>hydrogen gas</strong> for energy. Treebay Technology provides engineering for all these hydrogen-adjacent industries. <a href="/resources/hydrogen-guide">Read our Green Hydrogen Guide →</a></p>
+                            <p>
+                                We optimize <strong>fermentation efficiency</strong> through advanced
+                                <strong> yeast management</strong>, controlled process parameters, and
+                                high-performance fermenter design. This ensures
+                                <strong> maximum sugar-to-ethanol conversion</strong>, reduced losses, and
+                                consistent <strong>high alcohol yield</strong>.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">What is the typical timeline for a green hydrogen plant?</span>
+                            <span className="faq-q">Do you provide turnkey distillery plant solutions?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>A small-scale <strong>green hydrogen plant</strong> (100–500 kg/day <strong>hydrogen production</strong>) typically takes 8–14 months from FEED to commissioning. Larger industrial-scale <strong>hydrogen energy</strong> plants (1–10 TPD) require 18–30 months. Costs vary based on electrolyser technology, renewable power source, and site conditions. We offer free preliminary techno-economic assessments. <a href="/contact-us">Request a feasibility consultation →</a></p>
+                            <p>
+                                Yes, we offer complete <strong>turnkey distillery solutions</strong> — from
+                                <strong> feasibility studies</strong> and <strong>process design</strong> to
+                                <strong> engineering</strong>, <strong>manufacturing</strong>,
+                                <strong> installation</strong>, and <strong>commissioning</strong>.
+                                We also provide <strong>automation systems</strong> and operator training
+                                for seamless plant operation.
+                            </p>
                         </div>
                     </div>
 
                     <div className="faq-item">
                         <button className="faq-btn" aria-expanded="false">
-                            <span className="faq-q">Does Treebay Technology offer after-sales support and O&M services?</span>
+                            <span className="faq-q">What kind of operational support do you offer after plant installation?</span>
                             <span className="faq-icon">+</span>
                         </button>
                         <div className="faq-answer">
-                            <p>Yes. We provide comprehensive O&M support for all our projects — <strong>green hydrogen plant</strong> systems, <strong>food processing unit</strong> equipment, and <strong>machine manufacturing</strong> products. Services include preventive maintenance contracts, spare parts supply, remote monitoring, on-site troubleshooting, and operator retraining. <a href="/contact-us">Contact our support team →</a></p>
+                            <p>
+                                We provide comprehensive <strong>after-sales support</strong> including
+                                <strong> maintenance services</strong>, <strong>spare parts supply</strong>,
+                                <strong> performance optimization</strong>, and
+                                <strong> remote monitoring</strong>. Our goal is to ensure
+                                <strong> uninterrupted plant operation</strong> and long-term efficiency.
+                            </p>
                         </div>
                     </div>
 

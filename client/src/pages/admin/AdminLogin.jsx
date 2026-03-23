@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import '../css/AdminLogin.css';
+import '../../css/admin/AdminLogin.css';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 

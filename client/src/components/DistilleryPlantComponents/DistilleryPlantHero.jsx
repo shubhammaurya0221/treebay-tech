@@ -18,7 +18,7 @@ const DistilleryPlantHero = () => {
       <div className="hero-content">
         <div className="eyebrow">Distillery Plant Manufacturers in India</div>
         <h1>
-          <em>Ethanol</em> & Distillation Solutions for Maximum Efficiency & Sustainability
+          <em>Ethanol</em> & <em>Distillation</em> Solutions for Maximum Efficiency
         </h1>
         <p className="hero-desc">
           <strong>Treebay Technology</strong> delivers next-generation <strong>distillery 
