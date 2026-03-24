@@ -7,6 +7,7 @@ import Home from './pages/normal/Home';
 import DistilleryPlant from './pages/normal/DistilleryPlant';
 import CompressedBiogasPlant from './pages/normal/CompressedBiogasPlant';
 import EthanolPlant2g from './pages/normal/EthanolPlant2g';
+import CommissioningStartup from './pages/normal/CommissioningStartup';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route path='/distillery-Plant' element={<DistilleryPlant />} />
       <Route path='/compressed-biogas-plant' element={<CompressedBiogasPlant />} />
       <Route path='/ethanol-plant-2g' element={<EthanolPlant2g />} />
-      {/* <Route path='/commissioning-startup' element={<CommissioningStartup />} /> */}
+      <Route path='/commissioning-startup' element={<CommissioningStartup />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
+import logo from "../../../assets/logo.png";
 
 /* ── Nav data ─────────────────────────────────── */
 const ALL_NAV = [
@@ -253,7 +254,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="nav-inner">
-        <div className="logo">Green<span>Process</span></div>
+        <div className="logo"><img src={logo} alt="logo" /></div>
 
         {/* ── Desktop links ── */}
         <ul className="nav-links">
@@ -283,7 +284,7 @@ const Navbar = () => {
       {/* ── Mobile drawer ── */}
       <div className={`mob-drawer${mobileOpen ? " mob-drawer--open" : ""}`}>
         <div className="mob-drawer-header">
-          <div className="logo logo--sm">Green<span>Process</span></div>
+          <div className="logo logo--sm"><img src={logo} alt="logo"/></div>
           <button className="mob-close-btn" onClick={close} aria-label="Close menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <line x1="18" y1="6" x2="6" y2="18" />

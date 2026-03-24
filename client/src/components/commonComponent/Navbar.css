@@ -10,12 +10,11 @@ nav {
   border-bottom: 1px solid rgba(106, 170, 125, 0.15);
 }
 
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--forest);
-  text-decoration: none;
+/* Base Logo Size (Desktop) */
+.logo img {
+  height: 3rem; 
+  width: auto;     /* Maintains aspect ratio */
+  display: block;  /* Removes bottom whitespace gap */
 }
 
 .logo span { color: var(--leaf); }
@@ -220,7 +219,10 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--border); flex-shrink: 0;
 }
-.logo--sm { font-size: 1.15rem; }
+/* Small Logo Size (Mobile Drawer) */
+.logo--sm img {
+  height: 2rem;
+}
 .mob-close-btn {
   background: none; border: none; cursor: pointer; color: rgba(168, 213, 181, 0.6);
   padding: 0.3rem; border-radius: 6px; line-height: 0; transition: color 0.2s, background 0.2s;
