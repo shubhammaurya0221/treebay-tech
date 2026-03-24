@@ -1,4 +1,5 @@
 import React from 'react';
+import './MissionBanner.css';
 
 const MissionBanner = () => {
     return (

@@ -1,3 +1,5 @@
+import './ProcessTimeline.css';
+
 const ProcessTimeline = () => {
   return (
     <section className="process-section">

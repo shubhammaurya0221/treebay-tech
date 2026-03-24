@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import './DistilleryPlantFAQ.css';
 
 const DistilleryPlantFAQ = () => {
     const faqRef = useRef(null);

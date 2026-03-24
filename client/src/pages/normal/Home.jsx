@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import '../../css/normal/Home.css';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from '../../components/commonComponent/Navbar';
+import Footer from '../../components/commonComponent/Footer';
 
 // Home Components
 import HomeHero from '../../components/HomeComponents/HomeHero';
@@ -15,7 +14,7 @@ import HomeResources from '../../components/HomeComponents/HomeResources';
 import HomeCTA from '../../components/HomeComponents/HomeCTA';
 import WhyUs from '../../components/HomeComponents/WhyUs';
 import Intro from '../../components/HomeComponents/Intro';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../../components/commonComponent/ContactForm';
 
 function Home() {
     useEffect(() => {

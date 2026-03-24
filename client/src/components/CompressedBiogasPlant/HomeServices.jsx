@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomeServices.css';
 
 const HomeServices = () => {
   const services = [

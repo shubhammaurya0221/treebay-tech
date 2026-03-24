@@ -1,4 +1,5 @@
 import React from 'react';
+import './DistilleryPlantServices.css';
 
 const DistilleryPlantServices = () => {
   const features = [

@@ -1,3 +1,5 @@
+import './CO2Section.css';
+
 const CO2Section = () => {
   return (
     <section className="co2-section" id="co2">

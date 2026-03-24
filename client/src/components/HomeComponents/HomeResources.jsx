@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomeResources.css';
 
 const HomeResources = () => {
     return (

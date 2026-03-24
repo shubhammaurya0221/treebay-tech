@@ -1,4 +1,5 @@
 import React from 'react';
+import './DistilleryPlantCTA.css';
 
 const DistilleryPlantCTA = () => {
     return (

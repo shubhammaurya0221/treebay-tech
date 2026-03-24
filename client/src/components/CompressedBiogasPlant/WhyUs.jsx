@@ -1,3 +1,5 @@
+import './WhyUs.css';
+
 const WhyUs = () => {
   return (
     <section className="why-section">

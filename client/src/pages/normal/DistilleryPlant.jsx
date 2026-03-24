@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import '../../css/normal/DistilleryPlant.css';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import ContactForm from '../../components/ContactForm';
+import Navbar from '../../components/commonComponent/Navbar';
+import Footer from '../../components/commonComponent/Footer';
+import ContactForm from '../../components/commonComponent/ContactForm';
 
 // Home Components
 import DistilleryPlantHero from '../../components/DistilleryPlantComponents/DistilleryPlantHero';

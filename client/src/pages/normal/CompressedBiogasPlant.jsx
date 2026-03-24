@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
-import '../../css/normal/CompressedBiogasPlant.css';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from '../../components/commonComponent/Navbar';
+import Footer from '../../components/commonComponent/Footer';
 
 // Home Components
-import HomeHero from '../../components/CompressedBiogasPlantComponent/HomeHero';
-import HomeStats from '../../components/CompressedBiogasPlantComponent/HomeStats';
-import HomeServices from '../../components/CompressedBiogasPlantComponent/HomeServices';                                                                                                                                                                                                                                                                                                                                        
-import H2Spotlight from '../../components/CompressedBiogasPlantComponent/H2Spotlight';
-import FAQ from '../../components/CompressedBiogasPlantComponent/FAQ';
-import HomeCTA from '../../components/CompressedBiogasPlantComponent/HomeCTA';
-import WhyUs from '../../components/CompressedBiogasPlantComponent/WhyUs';  
-import ContactForm from '../../components/ContactForm';
+import HomeHero from '../../components/CompressedBiogasPlant/HomeHero';
+import HomeStats from '../../components/CompressedBiogasPlant/HomeStats';
+import HomeServices from '../../components/CompressedBiogasPlant/HomeServices';                                                                                                                                                                                                                                                                                                                                        
+import H2Spotlight from '../../components/CompressedBiogasPlant/H2Spotlight';
+import FAQ from '../../components/CompressedBiogasPlant/FAQ';
+import HomeCTA from '../../components/CompressedBiogasPlant/HomeCTA';
+import WhyUs from '../../components/CompressedBiogasPlant/WhyUs';  
+import ContactForm from '../../components/commonComponent/ContactForm';
 
 function CompressedBiogasPlant() {
     useEffect(() => {

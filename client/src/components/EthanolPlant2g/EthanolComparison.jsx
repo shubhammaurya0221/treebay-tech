@@ -1,4 +1,5 @@
 import React from "react";
+import './EthanolComparison.css';
 
 const EthanolComparison = () => {
   const features = [

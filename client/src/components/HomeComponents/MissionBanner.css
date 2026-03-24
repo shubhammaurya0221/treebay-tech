@@ -1,0 +1,52 @@
+.mission-banner {
+  background: var(--pale);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.mission-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--leaf);
+  color: var(--white);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.mission-text { font-size: 0.9rem; color: var(--muted); font-weight: 400; line-height: 1.5; }
+.mission-text strong { color: var(--forest); font-weight: 600; }
+.mission-text a {
+  color: var(--leaf);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 0.3rem;
+}
+.mission-text a:hover { text-decoration: none; }
+.mission-cta {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--leaf);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(61,139,90, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+.mission-cta:hover { color: var(--forest); border-color: var(--forest); }
+
+@media (max-width: 1100px) {
+  .mission-banner { padding: 1.5rem 2rem; flex-wrap: wrap; }
+  .mission-cta { margin-left: 0; }
+}

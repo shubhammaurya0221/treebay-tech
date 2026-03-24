@@ -1,0 +1,8 @@
+.stats{background:var(--white);border-top:1px solid var(--border);padding:0 6%;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:2rem 1rem;text-align:center;border-right:1px solid rgba(106,170,125,0.12);}
+.stat:last-child{border-right:none;}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--min);display:block;line-height:1;}
+.stat-lbl{font-size:0.78rem;color:var(--leaf);letter-spacing:0.06em;margin-top:0.3rem;display:block;}
+
+@media(max-width:1024px){ .stats{grid-template-columns:1fr 1fr;} }
+@media(max-width:640px){ .stats{grid-template-columns:1fr;} }

@@ -1,0 +1,38 @@
+.cta-banner{
+  padding:6rem 6%;
+  background:var(--pale);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-banner::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(106,170,125,0.15) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 80% 50%,rgba(61,139,90,0.08) 0%,transparent 60%);
+}
+.cta-banner h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,3.5rem);
+  color:var(--forest);
+  margin-bottom:1rem;
+  position:relative;
+  font-weight:600;
+}
+.cta-banner h2 em{font-style:italic;color:var(--leaf);}
+.cta-banner p{
+  color:var(--muted);
+  font-size:1.1rem;
+  line-height:1.75;
+  max-width:580px;
+  margin:0 auto 2.5rem;
+  position:relative;
+}
+.cta-leaf{font-size:2.5rem;color:var(--leaf);margin-bottom:1rem;position:relative;z-index:2;}
+.cta-row{display:flex;justify-content:center;gap:1.5rem;position:relative;z-index:2;flex-wrap:wrap;}
+
+@media(max-width: 640px) {
+  .cta-banner { padding: 4rem 1.5rem; }
+}

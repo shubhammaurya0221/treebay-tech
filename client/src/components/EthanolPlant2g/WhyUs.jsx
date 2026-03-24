@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/normal/EthanolPlant2g.css';
+import './WhyUs.css';
 
 const whyData = [
   {

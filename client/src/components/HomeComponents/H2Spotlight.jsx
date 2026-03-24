@@ -1,4 +1,5 @@
 import React from 'react';
+import './H2Spotlight.css';
 
 const H2Spotlight = () => {
     return (

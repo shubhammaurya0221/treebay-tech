@@ -1,4 +1,5 @@
 import React from 'react';
+import './DistilleryPlantH2Spotlight.css';
 
 const DistilleryPlantH2Spotlight = () => {
     return (

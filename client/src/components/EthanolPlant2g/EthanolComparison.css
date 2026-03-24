@@ -1,0 +1,8 @@
+.comparison-table table { width: 100%; border-collapse: collapse; }
+.comparison-table th, .comparison-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+.comparison-table th { font-size: 0.85rem; text-transform: uppercase; opacity: 0.7; }
+.comparison-table .highlight { font-weight: 600; color: var(--accent); background: var(--pale); }
