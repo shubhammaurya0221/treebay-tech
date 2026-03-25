@@ -1,23 +1,23 @@
-import './Stats.css';
+import React from 'react';
 
 const Stats = () => {
   return (
-    <div className="stats">
-      <div className="stat">
-        <span className="stat-val">200+</span>
-        <span className="stat-lbl">Bioprocess Projects Delivered</span>
+    <div className="bg-white border-t border-[rgba(61,139,90,0.18)] px-[6%] grid grid-cols-4 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
+      <div className="p-8 text-center border-r border-[rgba(106,170,125,0.12)] max-[1024px]:nth-2:border-r-0 max-[640px]:border-r-0 max-[640px]:border-b">
+        <span className="font-['Cormorant_Garamond',serif] text-[2.4rem] font-bold text-[#a8d5b5] block leading-none">200+</span>
+        <span className="text-[0.78rem] text-[#3d8b5a] tracking-widest mt-1 block uppercase">Bioprocess Projects Delivered</span>
       </div>
-      <div className="stat">
-        <span className="stat-val">40%</span>
-        <span className="stat-lbl">Avg. Energy Reduction Achieved</span>
+      <div className="p-8 text-center border-r border-[rgba(106,170,125,0.12)] max-[1024px]:border-r-0 max-[640px]:border-b">
+        <span className="font-['Cormorant_Garamond',serif] text-[2.4rem] font-bold text-[#a8d5b5] block leading-none">40%</span>
+        <span className="text-[0.78rem] text-[#3d8b5a] tracking-widest mt-1 block uppercase">Avg. Energy Reduction Achieved</span>
       </div>
-      <div className="stat">
-        <span className="stat-val">95%</span>
-        <span className="stat-lbl">CO₂ Capture Efficiency</span>
+      <div className="p-8 text-center border-r border-[rgba(106,170,125,0.12)] max-[1024px]:nth-4:border-r-0 max-[640px]:border-r-0 max-[640px]:border-b">
+        <span className="font-['Cormorant_Garamond',serif] text-[2.4rem] font-bold text-[#a8d5b5] block leading-none">95%</span>
+        <span className="text-[0.78rem] text-[#3d8b5a] tracking-widest mt-1 block uppercase">CO₂ Capture Efficiency</span>
       </div>
-      <div className="stat">
-        <span className="stat-val">30+</span>
-        <span className="stat-lbl">Years in Green Process Engineering</span>
+      <div className="p-8 text-center">
+        <span className="font-['Cormorant_Garamond',serif] text-[2.4rem] font-bold text-[#a8d5b5] block leading-none">30+</span>
+        <span className="text-[0.78rem] text-[#3d8b5a] tracking-widest mt-1 block uppercase">Years in Green Process Engineering</span>
       </div>
     </div>
   );

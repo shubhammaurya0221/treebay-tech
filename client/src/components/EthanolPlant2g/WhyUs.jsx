@@ -1,5 +1,4 @@
 import React from 'react';
-import './WhyUs.css';
 
 const whyData = [
   {
@@ -36,21 +35,21 @@ const whyData = [
 
 const WhyUs = () => {
   return (
-    <section className="why-section">
-      <div className="why-inner">
-        <div className="why-header">
-          <span className="sec-tag">WHY TECHNOLOGY LEADERS CHOOSE US</span>
-          <h2 className="sec-title">
+    <section className="py-28 px-[6%] bg-[#e8f5ed] max-[640px]:py-16 max-[640px]:px-6 text-left" id="why-us">
+      <div className="max-w-[1240px] mx-auto">
+        <div className="text-center max-w-[680px] mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 text-[0.68rem] font-bold tracking-[0.2em] uppercase text-[#3d8b5a] mb-3 mx-auto after:content-[''] after:w-6 after:h-[1px] after:bg-[#3d8b5a] before:content-[''] before:w-6 before:h-[1px] before:bg-[#3d8b5a]">WHY TECHNOLOGY LEADERS CHOOSE US</span>
+          <h2 className="font-['Cormorant_Garamond',serif] text-[clamp(2.5rem,5vw,3.5rem)] text-[#1a3a2a] leading-tight font-semibold">
             Deep Science. Real Engineering. Commercial Results.
           </h2>
         </div>
         
-        <div className="why-grid">
+        <div className="grid grid-cols-3 gap-6 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1">
           {whyData.map((item, index) => (
-            <div className="why-card" key={index}>
-              <div className="why-icon">{item.icon}</div>
-              <h3 className="why-card-title">{item.title}</h3>
-              <p className="why-card-desc">{item.desc}</p>
+            <div className="bg-white rounded-[12px] p-9 border border-[rgba(61,139,90,0.18)] transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(26,58,42,0.1)] hover:border-[#3d8b5a]" key={index}>
+              <div className="text-[2.2rem] mb-4">{item.icon}</div>
+              <h3 className="font-['Cormorant_Garamond',serif] text-[1.2rem] font-semibold text-[#1a3a2a] mb-2">{item.title}</h3>
+              <p className="text-[0.85rem] text-[#4a6157] leading-[1.7]">{item.desc}</p>
             </div>
           ))}
         </div>

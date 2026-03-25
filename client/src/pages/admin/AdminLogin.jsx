@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import '../../css/admin/AdminLogin.css';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const AdminLogin = () => {
   const navigate = useNavigate();
-  const [form, setForm]     = useState({ email: '', password: '' });
-  const [error, setError]   = useState('');
+  const [form, setForm] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // Already logged in?
   if (localStorage.getItem('adminToken')) {
     return <Navigate to="/admin" replace />;
   }
@@ -28,7 +26,7 @@ const AdminLogin = () => {
     }
     setLoading(true);
     try {
-      const res  = await fetch(`${API}/api/admin/login`, {
+      const res = await fetch(`${API}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -41,85 +39,85 @@ const AdminLogin = () => {
         setError(data.error || 'Login failed. Check your credentials.');
       }
     } catch {
-      setError('Could not connect to the server. Make sure the backend is running.');
+      setError('Could not connect to the server.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="admin-login-bg">
-      {/* Decorative rings */}
-      <svg className="admin-login-rings" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="300" cy="300" r="120" fill="none" stroke="var(--sage)" strokeWidth="1" />
-        <circle cx="300" cy="300" r="200" fill="none" stroke="var(--sage)" strokeWidth="0.5" />
-        <circle cx="300" cy="300" r="280" fill="none" stroke="var(--sage)" strokeWidth="0.4" />
-      </svg>
+    <div className="min-h-screen bg-[#e6f4ea] flex items-center justify-center p-6 relative overflow-hidden font-sans">
+      {/* Decorative background circles */}
+      <div className="absolute -right-20 -bottom-20 w-96 h-96 border border-green-100 rounded-full pointer-events-none"></div>
+      <div className="absolute -right-10 -bottom-10 w-96 h-96 border border-green-50 rounded-full pointer-events-none"></div>
 
-      <div className="admin-login-card">
-        {/* Logo */}
-        <div className="admin-login-logo">
-          Green<span>Process</span>
-        </div>
-
-        <div className="admin-login-header">
-          <h1>Admin Panel</h1>
-          <p>Sign in to manage contact submissions</p>
+      <div className="bg-white rounded-[24px] shadow-sm p-10 w-full max-w-[440px] z-10">
+        {/* Logo Section */}
+        <div className="text-center mb-8">
+          <div className="text-2xl font-serif font-bold text-[#1a3a2a] mb-6">
+            Green<span className="text-[#438e64]">Process</span>
+          </div>
+          <h1 className="text-[1.75rem] font-serif text-[#1a3a2a] mb-2">Admin Panel</h1>
+          <p className="text-gray-500 text-sm">Sign in to manage contact submissions</p>
         </div>
 
         {error && (
-          <div className="admin-alert admin-alert-error">
-            <span>⚠</span> {error}
+          <div className="mb-4 p-3 bg-red-50 border border-red-100 text-red-600 text-sm rounded-lg text-center">
+            {error}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} noValidate>
-          <div className="admin-form-group">
-            <label htmlFor="al-email">Email Address</label>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Email Field */}
+          <div className="space-y-2">
+            <label className="text-[0.7rem] font-bold tracking-widest uppercase text-[#438e64]">
+              Email Address
+            </label>
             <input
-              id="al-email"
               name="email"
               type="email"
               placeholder="admin@gmail.com"
               value={form.email}
               onChange={handleChange}
-              autoComplete="email"
-              className="admin-input"
+              className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#438e64] transition-colors"
             />
           </div>
 
-          <div className="admin-form-group">
-            <label htmlFor="al-password">Password</label>
+          {/* Password Field */}
+          <div className="space-y-2">
+            <label className="text-[0.7rem] font-bold tracking-widest uppercase text-[#438e64]">
+              Password
+            </label>
             <input
-              id="al-password"
               name="password"
               type="password"
               placeholder="••••••••"
               value={form.password}
               onChange={handleChange}
-              autoComplete="current-password"
-              className="admin-input"
+              className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#438e64] transition-colors"
             />
           </div>
 
-          <button type="submit" className="admin-btn-primary" disabled={loading}>
-            {loading ? (
-              <span className="admin-spinner" />
-            ) : (
-              <>
-                Sign In
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-[#438e64] hover:bg-[#367552] text-white py-3.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70"
+          >
+            {loading ? 'Processing...' : 'Sign In'}
+            {!loading && (
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             )}
           </button>
         </form>
 
-        <p className="admin-login-back">
-          <a href="/">← Back to website</a>
-        </p>
+        <div className="mt-8 text-center">
+          <a href="/" className="text-gray-300 hover:text-gray-400 text-sm transition-colors flex items-center justify-center gap-1">
+            <span>←</span> Back to website
+          </a>
+        </div>
       </div>
     </div>
   );

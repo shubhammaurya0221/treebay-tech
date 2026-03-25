@@ -1,5 +1,4 @@
 import React from 'react';
-import './HomeServices.css';
 
 const HomeServices = () => {
   const services = [
@@ -54,38 +53,38 @@ const HomeServices = () => {
   ];
 
   return (
-    <section className="services" id="services">
-      <div className="svc-header">
-        <div className="section-tag" style={{ justifyContent: 'center' }}>
+    <section className="py-28 px-[6%] bg-[#f7fbf8] max-[640px]:py-16 max-[640px]:px-6" id="services">
+      <div className="text-center max-w-[680px] mx-auto mb-20">
+        <div className="inline-flex items-center text-center gap-2 text-[0.68rem] font-bold tracking-[0.2em] uppercase text-[#3d8b5a] mb-3 mx-auto">
           Compressed Biogas Solutions
         </div>
 
-        <h2>
-          How Our <em>CBG Plants Work & Deliver Value</em>
+        <h2 className="font-['Cormorant_Garamond',serif] text-center text-[clamp(2.5rem,5vw,3.5rem)] text-[#1a3a2a] leading-[1.1] mb-4 font-semibold">
+          How Our <em className="italic text-[#3d8b5a] ">CBG Plants Work <br /> & Deliver Value</em>
         </h2>
 
-        <p>
-          <strong>Treebay Technology</strong> delivers advanced <strong>compressed biogas (CBG)</strong> plant solutions 
-          covering the complete lifecycle — from <strong>biogas generation</strong> and purification 
-          to <strong>compression, storage</strong>, and real-world industrial applications.
+        <p className="text-[#4a6157] text-[1.1rem] leading-[1.8] mt-4">
+          <strong className="font-bold">Treebay Technology</strong> delivers advanced <strong className="font-bold">compressed biogas (CBG)</strong> plant solutions
+          covering the complete lifecycle — from <strong className="font-bold">biogas generation</strong> and purification
+          to <strong className="font-bold">compression, storage</strong>, and real-world industrial applications.
         </p>
       </div>
 
-      <div className="services-grid-home">
+      <div className="grid grid-cols-3 gap-6 max-[1100px]:grid-cols-1">
         {services.map((svc, idx) => (
-          <div className="srv-card" key={idx}>
-            <div className="srv-num">{svc.num}</div>
-            <div className="srv-icon">{svc.icon}</div>
-            <h3>{svc.title}</h3>
-            <p>{svc.desc}</p>
+          <div className="bg-white border border-[rgba(61,139,90,0.18)] rounded-[12px] p-10 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:bg-[#3d8b5a] before:h-1 before:rounded-b-[12px] text-left transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(26,58,42,0.1)] hover:border-[#3d8b5a]" key={idx}>
+            <div className="text-[#a8d5b5] text-[0.75rem] font-semibold mb-4">{svc.num}</div>
+            <div className="text-[2rem] mb-6">{svc.icon}</div>
+            <h3 className="font-['Cormorant_Garamond',serif] text-[1.35rem] text-[#1a3a2a] mb-[0.8rem] font-semibold">{svc.title}</h3>
+            <p className="text-[#4a6157] text-[0.9rem] leading-[1.6] mb-6">{svc.desc}</p>
 
-            <div className="srv-tags">
+            <div className="flex flex-wrap gap-[0.4rem] mb-6">
               {svc.tags.map((tag, tIdx) => (
-                <span className="srv-tag" key={tIdx}>{tag}</span>
+                <span className="border border-[rgba(106,170,125,0.4)] text-[#3d8b5a] font-medium text-[0.7rem] px-[0.6rem] py-[0.2rem] rounded-[20px] uppercase " key={tIdx}>{tag}</span>
               ))}
             </div>
 
-            <a href={svc.link} className="srv-link">
+            <a href={svc.link} className="text-[#3d8b5a] font-semibold text-[0.85rem] no-underline transition-colors duration-200 hover:text-[#1a3a2a]">
               Learn More →
             </a>
           </div>

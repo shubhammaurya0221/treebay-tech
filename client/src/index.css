@@ -15,14 +15,6 @@
   --border: rgba(61, 139, 90, 0.18);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
